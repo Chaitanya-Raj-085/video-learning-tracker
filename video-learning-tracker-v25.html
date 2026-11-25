@@ -291,16 +291,6 @@
         overflow: hidden;
         text-overflow: ellipsis;
       }
-      .course-chip .chip-hours {
-        flex: 0 0 auto;
-        color: var(--text-faint);
-        font: 500 10px var(--font-mono);
-        font-variant-numeric: tabular-nums;
-      }
-      .course-chip.active .chip-hours {
-        color: var(--accent);
-        opacity: 0.8;
-      }
       .course-chip .chip-flag {
         font-size: 11px;
       }
@@ -549,14 +539,23 @@
         opacity: 0.45;
         cursor: wait;
       }
-      .activity-panel {
-        margin: 0 0 20px;
-        padding: 16px;
+      .activity-dialog {
+        width: min(820px, calc(100vw - 28px));
+        max-width: 820px;
+        max-height: min(88vh, 760px);
+        padding: 18px;
         background: var(--bg-elev);
-        border: 1px solid var(--border-soft);
+        border: 1px solid var(--border);
         border-radius: var(--radius-lg);
+        color: var(--text);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.58);
+        overflow: auto;
       }
-      .activity-header {
+      .activity-dialog::backdrop {
+        background: rgba(3, 5, 9, 0.76);
+        backdrop-filter: blur(5px);
+      }
+      .activity-dialog-header {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -693,33 +692,42 @@
         font: 500 11px var(--font-mono);
       }
       .activity-course-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
-        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
       }
       .activity-course-card {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 10px;
+        display: grid;
+        grid-template-columns: minmax(100px, 1fr) auto;
+        align-items: center;
+        gap: 6px 12px;
         min-width: 0;
-        padding: 10px 11px;
-        border: 1px solid var(--border-soft);
-        border-radius: var(--radius-md);
-        background: rgba(9, 11, 15, 0.28);
-        color: var(--text-dim);
-        font-size: 12px;
       }
       .activity-course-name {
         min-width: 0;
         overflow-wrap: anywhere;
+        color: var(--text-dim);
+        font-size: 12px;
       }
       .activity-course-hours {
         flex: 0 0 auto;
-        margin-left: auto;
         color: var(--accent);
-        font: 500 10px var(--font-mono);
+        font: 500 11px var(--font-mono);
         font-variant-numeric: tabular-nums;
+      }
+      .activity-course-track {
+        grid-column: 1 / -1;
+        height: 7px;
+        overflow: hidden;
+        background: var(--bg-elev-3);
+        border-radius: 999px;
+      }
+      .activity-course-fill {
+        height: 100%;
+        min-width: 0;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--accent-strong), var(--accent));
+        transition: width 0.3s ease;
       }
       .activity-empty {
         margin: 0;
@@ -1428,18 +1436,25 @@
       <!-- Course switcher -->
       <div class="course-bar" id="courseBar"></div>
 
-      <section
-        class="activity-panel"
+      <dialog
+        class="activity-dialog"
         id="activityPanel"
-        hidden
         aria-labelledby="activityTitle"
       >
-        <div class="activity-header">
+        <div class="activity-dialog-header">
           <div class="activity-heading">
             <h2 id="activityTitle">Study activity</h2>
             <p>Daily time from accessible course folders · select a day for details</p>
           </div>
           <span class="activity-total mono" id="activityTotal"></span>
+          <button
+            type="button"
+            class="btn btn-sm"
+            id="closeActivityBtn"
+            aria-label="Close study activity"
+          >
+            ✕
+          </button>
         </div>
         <div class="activity-scroll">
           <div class="activity-calendar-layout">
@@ -1473,9 +1488,8 @@
           class="activity-breakdown"
           id="activityBreakdown"
           aria-live="polite"
-          hidden
         ></div>
-      </section>
+      </dialog>
 
       <!-- Shown when no course is active -->
       <p class="placeholder" id="placeholder">
@@ -2241,7 +2255,6 @@
             if (merged.changed) {
               renderAll();
               renderActivity();
-              renderCourseBar();
               showToast("Picked up progress saved from another tab or device.", 3500);
             }
             await saveProgressNow();
@@ -2529,7 +2542,6 @@
               applyMergedState(result.merged);
               renderAll();
               renderActivity();
-              renderCourseBar();
               showToast(
                 "Merged progress saved from another tab or device.",
                 3500,
@@ -2879,19 +2891,10 @@
             const chip = document.createElement("div");
             chip.className =
               "course-chip" + (c.id === activeCourseId ? " active" : "");
-            const day = selectedActivityDate || dateKey();
-            const seconds = getCourseActivitySeconds(c.id, day);
-            const duration = courseDailyWatch.has(c.id)
-              ? formatActivityDuration(seconds)
-              : "—";
-            const activityLabel = courseDailyWatch.has(c.id)
-              ? `${c.name} · ${duration} on ${day}`
-              : `${c.name} · reopen this folder to load study activity`;
-            chip.title = activityLabel;
+            chip.title = c.name;
             chip.innerHTML = `
         <span class="chip-flag">📁</span>
         <span class="chip-name">${escapeHtml(c.name)}</span>
-        <span class="chip-hours" aria-label="${escapeHtml(activityLabel)}">${escapeHtml(duration)}</span>
         <button class="chip-remove" title="Remove">✕</button>
       `;
             chip.addEventListener("click", (e) => {
@@ -2912,6 +2915,23 @@
           addChip.innerHTML = `<span>＋</span><span>${courses.length ? "Add folder" : "Select Course Folder"}</span>`;
           addChip.addEventListener("click", addFolderViaPicker);
           courseBar.appendChild(addChip);
+
+          const activityButton = document.createElement("button");
+          activityButton.type = "button";
+          activityButton.className = "add-course-chip";
+          activityButton.id = "openActivityBtn";
+          activityButton.textContent = "▦ Study activity";
+          activityButton.hidden = !activeCourseId;
+          activityButton.setAttribute("aria-haspopup", "dialog");
+          activityButton.addEventListener("click", () => {
+            const dialog = $("activityPanel");
+            if (!dialog.open) dialog.showModal();
+            renderActivity();
+            $("activityGrid")
+              .querySelector('[aria-pressed="true"]')
+              ?.focus({ preventScroll: true });
+          });
+          courseBar.appendChild(activityButton);
         }
 
         async function removeCourse(id) {
@@ -3472,7 +3492,6 @@
           if (request !== activityRefreshRequest) return;
           results.forEach(([id, activity]) => courseDailyWatch.set(id, activity));
           if (activeCourseId) courseDailyWatch.set(activeCourseId, dailyWatch);
-          renderCourseBar();
           renderActivity();
         }
 
@@ -3512,6 +3531,7 @@
 
           const list = document.createElement("div");
           list.className = "activity-course-list";
+          const longestSession = Math.max(...entries.map((entry) => entry.seconds));
           entries.forEach((entry) => {
             const card = document.createElement("div");
             card.className = "activity-course-card";
@@ -3522,7 +3542,14 @@
             hours.className = "activity-course-hours";
             hours.textContent = formatActivityDuration(entry.seconds);
             hours.title = `${(entry.seconds / 3600).toFixed(2)} hours`;
-            card.append(name, hours);
+            const track = document.createElement("div");
+            track.className = "activity-course-track";
+            track.setAttribute("aria-hidden", "true");
+            const fill = document.createElement("div");
+            fill.className = "activity-course-fill";
+            fill.style.width = `${Math.max(3, (entry.seconds / longestSession) * 100)}%`;
+            track.appendChild(fill);
+            card.append(name, hours, track);
             list.appendChild(card);
           });
           panel.appendChild(list);
@@ -3531,10 +3558,10 @@
         function renderActivity() {
           const panel = $("activityPanel");
           if (!activeCourseId || !courses.length) {
-            panel.hidden = true;
+            if (panel.open) panel.close();
             return;
           }
-          panel.hidden = false;
+          if (!panel.open) return;
           const today = new Date();
           today.setHours(0, 0, 0, 0);
           const todayKey = dateKey(today);
@@ -3601,7 +3628,6 @@
                 button.addEventListener("click", () => {
                   selectedActivityDate = day;
                   renderActivity();
-                  renderCourseBar();
                   grid
                     .querySelector(`[data-date="${day}"]`)
                     ?.focus({ preventScroll: true });
@@ -3630,9 +3656,27 @@
           });
           const selected = getDayActivity(selectedActivityDate);
           $("activityTotal").textContent =
-            `${formatActivityDuration(selected.totalSeconds)} · ${selectedActivityDate}`;
+            `${selectedActivityDate} · ${formatActivityDuration(selected.totalSeconds)} total`;
           renderActivityBreakdown(selectedActivityDate);
         }
+
+        $("closeActivityBtn").addEventListener("click", () =>
+          $("activityPanel").close(),
+        );
+        $("activityPanel").addEventListener("click", (event) => {
+          if (event.target !== $("activityPanel")) return;
+          const bounds = $("activityPanel").getBoundingClientRect();
+          if (
+            event.clientX < bounds.left ||
+            event.clientX > bounds.right ||
+            event.clientY < bounds.top ||
+            event.clientY > bounds.bottom
+          )
+            $("activityPanel").close();
+        });
+        $("activityPanel").addEventListener("close", () => {
+          $("openActivityBtn")?.focus({ preventScroll: true });
+        });
 
         function addTodayWatch(seconds) {
           if (!Number.isFinite(seconds) || seconds <= 0) return;
@@ -3643,7 +3687,6 @@
             activityRenderTimer = setTimeout(() => {
               activityRenderTimer = null;
               renderActivity();
-              renderCourseBar();
             }, 5000);
           }
         }

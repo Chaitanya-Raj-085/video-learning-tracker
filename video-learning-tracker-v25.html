@@ -291,6 +291,16 @@
         overflow: hidden;
         text-overflow: ellipsis;
       }
+      .course-chip .chip-hours {
+        flex: 0 0 auto;
+        color: var(--text-faint);
+        font: 500 10px var(--font-mono);
+        font-variant-numeric: tabular-nums;
+      }
+      .course-chip.active .chip-hours {
+        color: var(--accent);
+        opacity: 0.8;
+      }
       .course-chip .chip-flag {
         font-size: 11px;
       }
@@ -539,53 +549,182 @@
         opacity: 0.45;
         cursor: wait;
       }
-      .today-row {
-        margin-top: 10px;
-        padding-top: 9px;
-        border-top: 1px solid var(--border-soft);
+      .activity-panel {
+        margin: 0 0 20px;
+        padding: 16px;
+        background: var(--bg-elev);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius-lg);
       }
-      .today-row-top {
+      .activity-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .activity-heading {
+        min-width: 0;
+      }
+      .activity-heading h2 {
+        margin: 0;
+        font: 600 15px var(--font-display);
+      }
+      .activity-heading p {
+        margin: 4px 0 0;
+        color: var(--text-faint);
+        font-size: 11.5px;
+      }
+      .activity-total {
+        flex: 0 0 auto;
+        padding: 5px 9px;
+        border: 1px solid var(--border-soft);
+        border-radius: 999px;
+        color: var(--accent);
+        background: rgba(9, 11, 15, 0.35);
+        font: 500 11px var(--font-mono);
+        font-variant-numeric: tabular-nums;
+      }
+      .activity-scroll {
+        overflow-x: auto;
+        padding: 2px 2px 8px;
+        scrollbar-width: thin;
+      }
+      .activity-calendar {
+        width: max-content;
+      }
+      .activity-months,
+      .activity-calendar-grid {
+        display: grid;
+        grid-auto-columns: 11px;
+        column-gap: 4px;
+      }
+      .activity-months {
+        height: 17px;
+        align-items: start;
+        color: var(--text-faint);
+        font-size: 10px;
+      }
+      .activity-calendar-grid {
+        grid-template-rows: repeat(7, 11px);
+        grid-auto-flow: column;
+        row-gap: 4px;
+      }
+      .activity-weekday-labels {
+        display: grid;
+        grid-template-rows: repeat(7, 11px);
+        gap: 4px;
+        padding-top: 19px;
+        padding-right: 8px;
+        color: var(--text-faint);
+        font-size: 9px;
+        line-height: 11px;
+      }
+      .activity-calendar-layout {
+        display: flex;
+        align-items: start;
+      }
+      .activity-day {
+        width: 11px;
+        height: 11px;
+        padding: 0;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 3px;
+        background: var(--bg-elev-2);
+        cursor: pointer;
+      }
+      .activity-day:hover {
+        outline: 1px solid var(--text-dim);
+        outline-offset: 1px;
+      }
+      .activity-day[aria-pressed="true"] {
+        outline: 2px solid var(--accent);
+        outline-offset: 1px;
+      }
+      .activity-day[data-level="1"] {
+        background: rgba(45, 212, 191, 0.28);
+      }
+      .activity-day[data-level="2"] {
+        background: rgba(45, 212, 191, 0.48);
+      }
+      .activity-day[data-level="3"] {
+        background: rgba(45, 212, 191, 0.7);
+      }
+      .activity-day[data-level="4"] {
+        background: var(--accent-strong);
+      }
+      .activity-footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         gap: 10px;
-        font-family: var(--font-mono);
-        font-size: 11px;
+        margin-top: 5px;
+      }
+      .activity-legend {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        color: var(--text-faint);
+        font-size: 10px;
+      }
+      .activity-legend .activity-day {
+        cursor: default;
+        pointer-events: none;
+      }
+      .activity-breakdown {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border-soft);
+      }
+      .activity-breakdown-heading {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 9px;
+      }
+      .activity-breakdown-heading h3 {
+        margin: 0;
+        font: 600 13px var(--font-display);
+      }
+      .activity-breakdown-total {
         color: var(--text-dim);
+        font: 500 11px var(--font-mono);
       }
-      .today-row-top > span b {
-        color: var(--text);
-        font-weight: 500;
+      .activity-course-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+        gap: 8px;
       }
-      .goal-btn {
-        appearance: none;
-        border: 0;
-        background: none;
-        padding: 0;
+      .activity-course-card {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+        min-width: 0;
+        padding: 10px 11px;
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius-md);
+        background: rgba(9, 11, 15, 0.28);
         color: var(--text-dim);
-        font: inherit;
-        cursor: pointer;
+        font-size: 12px;
       }
-      .goal-btn:hover {
-        color: var(--text);
+      .activity-course-name {
+        min-width: 0;
+        overflow-wrap: anywhere;
       }
-      .goal-btn b {
+      .activity-course-hours {
+        flex: 0 0 auto;
+        margin-left: auto;
         color: var(--accent);
-        font-weight: 600;
+        font: 500 10px var(--font-mono);
+        font-variant-numeric: tabular-nums;
       }
-      .today-progress-track {
-        height: 4px;
-        margin-top: 7px;
-        background: var(--bg-elev-3);
-        border-radius: 999px;
-        overflow: hidden;
-      }
-      .today-progress-fill {
-        height: 100%;
-        width: 0%;
-        background: var(--watching);
-        border-radius: 999px;
-        transition: width 0.25s ease;
+      .activity-empty {
+        margin: 0;
+        color: var(--text-faint);
+        font-size: 12px;
       }
       .list-controls {
         padding: 14px 14px 10px;
@@ -1289,6 +1428,55 @@
       <!-- Course switcher -->
       <div class="course-bar" id="courseBar"></div>
 
+      <section
+        class="activity-panel"
+        id="activityPanel"
+        hidden
+        aria-labelledby="activityTitle"
+      >
+        <div class="activity-header">
+          <div class="activity-heading">
+            <h2 id="activityTitle">Study activity</h2>
+            <p>Daily time from accessible course folders · select a day for details</p>
+          </div>
+          <span class="activity-total mono" id="activityTotal"></span>
+        </div>
+        <div class="activity-scroll">
+          <div class="activity-calendar-layout">
+            <div class="activity-weekday-labels" aria-hidden="true">
+              <span></span><span>Mon</span><span></span><span>Wed</span>
+              <span></span><span>Fri</span><span></span>
+            </div>
+            <div class="activity-calendar">
+              <div class="activity-months" id="activityMonths"></div>
+              <div
+                class="activity-calendar-grid"
+                id="activityGrid"
+                role="group"
+                aria-label="Study activity for the past year"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="activity-footer">
+          <span class="activity-legend" aria-label="Study time intensity legend">
+            Less
+            <span class="activity-day" data-level="0"></span>
+            <span class="activity-day" data-level="1"></span>
+            <span class="activity-day" data-level="2"></span>
+            <span class="activity-day" data-level="3"></span>
+            <span class="activity-day" data-level="4"></span>
+            More
+          </span>
+        </div>
+        <div
+          class="activity-breakdown"
+          id="activityBreakdown"
+          aria-live="polite"
+          hidden
+        ></div>
+      </section>
+
       <!-- Shown when no course is active -->
       <p class="placeholder" id="placeholder">
         Select a course folder to see videos and reading materials.
@@ -1349,21 +1537,6 @@
               >
                 Recheck
               </button>
-            </div>
-            <div class="today-row">
-              <div class="today-row-top">
-                <span>Today <b id="todayWatched">0m</b></span>
-                <button
-                  class="goal-btn"
-                  id="dailyGoalBtn"
-                  title="Change daily goal"
-                >
-                  Goal <b id="dailyGoalLabel">2h</b> ✎
-                </button>
-              </div>
-              <div class="today-progress-track">
-                <div class="today-progress-fill" id="todayProgressFill"></div>
-              </div>
             </div>
           </div>
 
@@ -1618,6 +1791,10 @@
         /* ================= State ================= */
         let courses = []; // [{id, name, handle?, files?, persist:bool, addedAt}]
         let activeCourseId = null;
+        const courseDailyWatch = new Map();
+        let selectedActivityDate = null;
+        let activityRefreshRequest = 0;
+        let activityRenderTimer = null;
         let allVideos = []; // Video files only; used for duration totals and Next navigation.
         let allDocuments = []; // PDF/TXT/Markdown files shown alongside videos in the course list.
         let progressMap = {}; // id -> {duration, currentTime, completed, lastWatched}
@@ -2025,6 +2202,7 @@
             );
           });
           dailyGoalSeconds = m.dailyGoalSeconds;
+          if (activeCourseId) courseDailyWatch.set(activeCourseId, dailyWatch);
         }
 
         // When the tab regains focus, pick up changes another tab/device wrote.
@@ -2062,6 +2240,8 @@
             lastFolderFileModified = file.lastModified;
             if (merged.changed) {
               renderAll();
+              renderActivity();
+              renderCourseBar();
               showToast("Picked up progress saved from another tab or device.", 3500);
             }
             await saveProgressNow();
@@ -2199,6 +2379,7 @@
           if (!course || !course.persist || !course.handle) {
             progressMap = {};
             dailyWatch = {};
+            courseDailyWatch.set(courseId, dailyWatch);
             dailyGoalSeconds = 2 * 3600;
             progressRevision++;
             folderProgressLoadStatus = "unavailable";
@@ -2245,6 +2426,7 @@
 
           progressMap = state.progress || {};
           dailyWatch = state.dailyWatch || {};
+          courseDailyWatch.set(courseId, dailyWatch);
           dailyGoalSeconds = Number(state.dailyGoalSeconds) || 2 * 3600;
           progressRevision++;
           hasUnsavedProgress = false;
@@ -2346,6 +2528,8 @@
             if (result.merged && result.merged.changed) {
               applyMergedState(result.merged);
               renderAll();
+              renderActivity();
+              renderCourseBar();
               showToast(
                 "Merged progress saved from another tab or device.",
                 3500,
@@ -2695,10 +2879,19 @@
             const chip = document.createElement("div");
             chip.className =
               "course-chip" + (c.id === activeCourseId ? " active" : "");
-            chip.title = c.name;
+            const day = selectedActivityDate || dateKey();
+            const seconds = getCourseActivitySeconds(c.id, day);
+            const duration = courseDailyWatch.has(c.id)
+              ? formatActivityDuration(seconds)
+              : "—";
+            const activityLabel = courseDailyWatch.has(c.id)
+              ? `${c.name} · ${duration} on ${day}`
+              : `${c.name} · reopen this folder to load study activity`;
+            chip.title = activityLabel;
             chip.innerHTML = `
         <span class="chip-flag">📁</span>
         <span class="chip-name">${escapeHtml(c.name)}</span>
+        <span class="chip-hours" aria-label="${escapeHtml(activityLabel)}">${escapeHtml(duration)}</span>
         <button class="chip-remove" title="Remove">✕</button>
       `;
             chip.addEventListener("click", (e) => {
@@ -2724,8 +2917,8 @@
         async function removeCourse(id) {
           const wasActive = id === activeCourseId;
           courses = courses.filter((c) => c.id !== id);
+          courseDailyWatch.delete(id);
           await idbDeleteFolder(id).catch(() => {});
-          renderCourseBar();
           if (wasActive) {
             activeCourseId = null;
             try {
@@ -2754,6 +2947,8 @@
             mainSection.hidden = true;
             placeholder.hidden = false;
           }
+          renderCourseBar();
+          renderActivity();
         }
 
         /* ================= Adding / selecting a course ================= */
@@ -2919,6 +3114,8 @@
 
           renderCourseBar();
           renderAll();
+          renderActivity();
+          void refreshCourseActivity();
           if (resumeTarget) scrollListRowIntoView(resumeTarget.video.id);
           ensureDurations(allVideos);
         }
@@ -3209,13 +3406,246 @@
           const d = String(date.getDate()).padStart(2, "0");
           return `${y}-${m}-${d}`;
         }
-        function getTodayWatchSeconds() {
-          return Math.max(0, Number(dailyWatch[dateKey()]) || 0);
+
+        function formatActivityDuration(seconds) {
+          const value = Math.max(0, Number(seconds) || 0);
+          if (value < 3600)
+            return value > 0 ? `${Math.max(1, Math.round(value / 60))}m` : "0m";
+          const hours = value / 3600;
+          return `${Number(hours.toFixed(hours >= 10 ? 0 : 1))}h`;
         }
+
+        function getCourseActivitySeconds(courseId, day) {
+          const activity =
+            courseDailyWatch.get(courseId) ||
+            (courseId === activeCourseId ? dailyWatch : {});
+          return Math.max(0, Number(activity[day]) || 0);
+        }
+
+        function getDayActivity(day) {
+          const entries = courses
+            .map((course) => ({
+              id: course.id,
+              name: course.name,
+              seconds: getCourseActivitySeconds(course.id, day),
+            }))
+            .filter((course) => course.seconds > 0)
+            .sort((a, b) => b.seconds - a.seconds);
+          return {
+            entries,
+            totalSeconds: entries.reduce((sum, course) => sum + course.seconds, 0),
+          };
+        }
+
+        async function refreshCourseActivity() {
+          const request = ++activityRefreshRequest;
+          const courseSnapshot = courses.slice();
+          const results = await Promise.all(
+            courseSnapshot.map(async (course) => {
+              if (course.id === activeCourseId)
+                return [course.id, dailyWatch];
+              if (!course.persist || !course.handle)
+                return [course.id, courseDailyWatch.get(course.id) || {}];
+              try {
+                const permission = await course.handle.queryPermission({
+                  mode: "read",
+                });
+                if (permission !== "granted")
+                  return [course.id, courseDailyWatch.get(course.id) || {}];
+                const result = await loadFolderState(course);
+                if (result.status === "loaded")
+                  return [course.id, result.state.dailyWatch || {}];
+                if (result.status === "missing") return [course.id, {}];
+                console.warn(
+                  `Could not read study activity for course "${course.name}":`,
+                  result.error || result.status,
+                );
+              } catch (e) {
+                console.warn(
+                  `Could not read study activity for course "${course.name}":`,
+                  e,
+                );
+              }
+              return [course.id, courseDailyWatch.get(course.id) || {}];
+            }),
+          );
+          if (request !== activityRefreshRequest) return;
+          results.forEach(([id, activity]) => courseDailyWatch.set(id, activity));
+          if (activeCourseId) courseDailyWatch.set(activeCourseId, dailyWatch);
+          renderCourseBar();
+          renderActivity();
+        }
+
+        function activityLevel(seconds) {
+          if (seconds <= 0) return 0;
+          if (seconds < 3600) return 1;
+          if (seconds < 2 * 3600) return 2;
+          if (seconds < 4 * 3600) return 3;
+          return 4;
+        }
+
+        function renderActivityBreakdown(day) {
+          const panel = $("activityBreakdown");
+          const { entries, totalSeconds } = getDayActivity(day);
+          panel.replaceChildren();
+
+          const heading = document.createElement("div");
+          heading.className = "activity-breakdown-heading";
+          const title = document.createElement("h3");
+          title.textContent = new Date(`${day}T12:00:00`).toLocaleDateString(
+            undefined,
+            { weekday: "long", month: "long", day: "numeric", year: "numeric" },
+          );
+          const total = document.createElement("span");
+          total.className = "activity-breakdown-total";
+          total.textContent = `${formatActivityDuration(totalSeconds)} total`;
+          heading.append(title, total);
+          panel.appendChild(heading);
+
+          if (!entries.length) {
+            const empty = document.createElement("p");
+            empty.className = "activity-empty";
+            empty.textContent = "No study time recorded for this day.";
+            panel.appendChild(empty);
+            return;
+          }
+
+          const list = document.createElement("div");
+          list.className = "activity-course-list";
+          entries.forEach((entry) => {
+            const card = document.createElement("div");
+            card.className = "activity-course-card";
+            const name = document.createElement("span");
+            name.className = "activity-course-name";
+            name.textContent = entry.name;
+            const hours = document.createElement("span");
+            hours.className = "activity-course-hours";
+            hours.textContent = formatActivityDuration(entry.seconds);
+            hours.title = `${(entry.seconds / 3600).toFixed(2)} hours`;
+            card.append(name, hours);
+            list.appendChild(card);
+          });
+          panel.appendChild(list);
+        }
+
+        function renderActivity() {
+          const panel = $("activityPanel");
+          if (!activeCourseId || !courses.length) {
+            panel.hidden = true;
+            return;
+          }
+          panel.hidden = false;
+          const today = new Date();
+          today.setHours(0, 0, 0, 0);
+          const todayKey = dateKey(today);
+          if (!selectedActivityDate) selectedActivityDate = todayKey;
+
+          const start = new Date(today);
+          start.setDate(start.getDate() - 364 - start.getDay());
+          const weeks = [];
+          const cursor = new Date(start);
+          while (cursor <= today) {
+            const week = [];
+            for (let day = 0; day < 7; day++) {
+              week.push(new Date(cursor));
+              cursor.setDate(cursor.getDate() + 1);
+            }
+            weeks.push(week);
+          }
+
+          const months = $("activityMonths");
+          const grid = $("activityGrid");
+          months.replaceChildren();
+          grid.replaceChildren();
+          months.style.gridTemplateColumns = `repeat(${weeks.length}, 11px)`;
+          grid.style.gridTemplateColumns = `repeat(${weeks.length}, 11px)`;
+          let previousMonth = -1;
+          weeks.forEach((week, weekIndex) => {
+            const month = week[0].getMonth();
+            if (month !== previousMonth) {
+              const label = document.createElement("span");
+              label.textContent = week[0].toLocaleDateString(undefined, {
+                month: "short",
+              });
+              label.style.gridColumnStart = String(weekIndex + 1);
+              months.appendChild(label);
+              previousMonth = month;
+            }
+            week.forEach((date) => {
+              const day = dateKey(date);
+              const seconds = getDayActivity(day).totalSeconds;
+              const button = document.createElement("button");
+              button.type = "button";
+              button.className = "activity-day";
+              button.dataset.level = String(activityLevel(seconds));
+              button.dataset.date = day;
+              button.setAttribute(
+                "aria-label",
+                `${date.toLocaleDateString(undefined, {
+                  weekday: "long",
+                  month: "long",
+                  day: "numeric",
+                  year: "numeric",
+                })}: ${formatActivityDuration(seconds)} studied`,
+              );
+              button.setAttribute(
+                "aria-pressed",
+                String(day === selectedActivityDate),
+              );
+              button.tabIndex = day === selectedActivityDate ? 0 : -1;
+              button.title = `${day} · ${formatActivityDuration(seconds)}`;
+              if (date > today) {
+                button.disabled = true;
+                button.setAttribute("aria-hidden", "true");
+              } else {
+                button.addEventListener("click", () => {
+                  selectedActivityDate = day;
+                  renderActivity();
+                  renderCourseBar();
+                  grid
+                    .querySelector(`[data-date="${day}"]`)
+                    ?.focus({ preventScroll: true });
+                });
+                button.addEventListener("keydown", (event) => {
+                  const offset = {
+                    ArrowLeft: -1,
+                    ArrowRight: 1,
+                    ArrowUp: -7,
+                    ArrowDown: 7,
+                  }[event.key];
+                  if (!offset) return;
+                  const nextDate = new Date(`${day}T12:00:00`);
+                  nextDate.setDate(nextDate.getDate() + offset);
+                  const nextDay = dateKey(nextDate);
+                  const nextButton = grid.querySelector(
+                    `[data-date="${nextDay}"]`,
+                  );
+                  if (!nextButton || nextButton.disabled) return;
+                  event.preventDefault();
+                  nextButton.click();
+                });
+              }
+              grid.appendChild(button);
+            });
+          });
+          const selected = getDayActivity(selectedActivityDate);
+          $("activityTotal").textContent =
+            `${formatActivityDuration(selected.totalSeconds)} · ${selectedActivityDate}`;
+          renderActivityBreakdown(selectedActivityDate);
+        }
+
         function addTodayWatch(seconds) {
           if (!Number.isFinite(seconds) || seconds <= 0) return;
           const key = dateKey();
           dailyWatch[key] = (Number(dailyWatch[key]) || 0) + seconds;
+          if (activeCourseId) courseDailyWatch.set(activeCourseId, dailyWatch);
+          if (!activityRenderTimer) {
+            activityRenderTimer = setTimeout(() => {
+              activityRenderTimer = null;
+              renderActivity();
+              renderCourseBar();
+            }, 5000);
+          }
         }
 
         function renderDashboard() {
@@ -3268,12 +3698,6 @@
             missing > 0
               ? `Total includes ${s.durationKnownCount} of ${allVideos.length} videos. ${missing} video(s) with unreadable duration metadata are excluded.`
               : "Sum of the readable durations of all video files.";
-
-          const todaySeconds = getTodayWatchSeconds();
-          $("todayWatched").textContent = formatHM(todaySeconds);
-          $("dailyGoalLabel").textContent = formatHM(dailyGoalSeconds);
-          $("todayProgressFill").style.width =
-            `${Math.min(100, dailyGoalSeconds ? (todaySeconds / dailyGoalSeconds) * 100 : 0)}%`;
 
           if (s.allCompleted && !celebrated) {
             celebrated = true;
@@ -4126,24 +4550,6 @@
             URL.revokeObjectURL(currentDocumentUrl);
             currentDocumentUrl = null;
           }
-        });
-
-        $("dailyGoalBtn").addEventListener("click", () => {
-          const currentMinutes = Math.max(1, Math.round(dailyGoalSeconds / 60));
-          const input = prompt(
-            "Daily learning goal (minutes):",
-            String(currentMinutes),
-          );
-          if (input === null) return;
-          const minutes = Number(input);
-          if (!Number.isFinite(minutes) || minutes <= 0 || minutes > 24 * 60) {
-            showToast("Please enter a goal between 1 and 1440 minutes.");
-            return;
-          }
-          dailyGoalSeconds = Math.round(minutes * 60);
-          goalChangedLocally = true;
-          saveProgressNow();
-          renderDashboard();
         });
 
         $("recheckDurationsBtn").addEventListener("click", () => {

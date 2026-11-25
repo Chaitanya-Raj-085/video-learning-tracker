@@ -1,0 +1,960 @@
+{
+  "version": 2,
+  "courseName": "TOC",
+  "updatedAt": "2026-11-25T13:58:45.865Z",
+  "dailyGoalSeconds": 7200,
+  "dailyWatch": {
+    "2026-10-30": 37.295715,
+    "2026-10-31": 4236.653381000004,
+    "2026-11-03": 11047.688633000069,
+    "2026-11-04": 3357.20408199999,
+    "2026-11-11": 17106.108987999945,
+    "2026-11-13": 5055.285950999979,
+    "2026-11-17": 2015.9399500000068,
+    "2026-11-18": 17708.577683000145,
+    "2026-11-19": 12418.552292999988,
+    "2026-11-20": 3225.0412760000063,
+    "2026-11-24": 15285.66766600014,
+    "2026-11-25": 5080.016815000003
+  },
+  "progress": {
+    "Module 1/02. Lecture 2A - Basic Concepts - Alphabet, String.mp4": {
+      "durationFileSize": 244958858,
+      "durationFileLastModified": 1706602506000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "currentTime": 2657.92,
+      "lastWatched": 1793441156651,
+      "duration": 2657.92,
+      "completed": true
+    },
+    "Module 1/03. Lecture 2B - Basic Concepts - Concatenation of Strings.mp4": {
+      "durationFileSize": 93705440,
+      "durationFileLastModified": 1706602566000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "currentTime": 1111.4,
+      "lastWatched": 1793441438184,
+      "duration": 1111.4,
+      "completed": true
+    },
+    "Module 1/04. Lecture 2C - Basic Concepts - Prefix, Suffix, Substring, Subsequence.mp4": {
+      "durationFileSize": 246120155,
+      "durationFileLastModified": 1706602692000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "currentTime": 2835.52,
+      "lastWatched": 1793444266915,
+      "duration": 2835.52,
+      "completed": true
+    },
+    "Module 1/05. Lecture 3A - Language.mp4": {
+      "durationFileSize": 114393197,
+      "durationFileLastModified": 1706602778000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1249.92,
+      "currentTime": 1249.92,
+      "lastWatched": 1793444734480,
+      "completed": true
+    },
+    "Module 1/06. Lecture 3B - Set Operations on Languages.mp4": {
+      "durationFileSize": 131264351,
+      "durationFileLastModified": 1706602938000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1560.68,
+      "currentTime": 1560.68,
+      "lastWatched": 1793700070503,
+      "completed": true
+    },
+    "Module 1/07. Lecture 3C - Exponentiation of Language, Kleene Closure.mp4": {
+      "durationFileSize": 191618985,
+      "durationFileLastModified": 1706603060000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 2222.24,
+      "currentTime": 2222.24,
+      "lastWatched": 1793702864264,
+      "completed": true
+    },
+    "Module 1/08. Lecture 4 - Practice Questions - Basic Concepts.mp4": {
+      "durationFileSize": 104432468,
+      "durationFileLastModified": 1706603124000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1196.92,
+      "currentTime": 1196.92,
+      "lastWatched": 1793703597723,
+      "completed": true
+    },
+    "Module 1/09. Lecture 5 - Complement of a Language.mp4": {
+      "durationFileSize": 195736385,
+      "durationFileLastModified": 1706603254000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 2062.56,
+      "currentTime": 2062.56,
+      "lastWatched": 1793704659174,
+      "completed": true
+    },
+    "Module 1/10. Lecture 6 - What we study in Theory of Computation & Why.mp4": {
+      "durationFileSize": 162695903,
+      "durationFileLastModified": 1706603332000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1525.433333,
+      "currentTime": 1519.471018,
+      "lastWatched": 1793705500497,
+      "completed": true
+    },
+    "Module 1/11. Lecture 7A - Finite Automata - Introduction.mp4": {
+      "durationFileSize": 377268897,
+      "durationFileLastModified": 1706603500000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 2972.7,
+      "currentTime": 32.382704,
+      "lastWatched": 1793708011475,
+      "completed": true
+    },
+    "Module 1/12. Lecture 7B - Finite Automata - Part 2.mp4": {
+      "durationFileSize": 316064823,
+      "durationFileLastModified": 1706603666000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 3206.16,
+      "currentTime": 3206.16,
+      "lastWatched": 1793795419211,
+      "completed": true
+    },
+    "Module 1/13. Lecture 7C - Finite Automata Formal Definition & Rules.mp4": {
+      "durationFileSize": 140866340,
+      "durationFileLastModified": 1706603762000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1505.96,
+      "currentTime": 1505.96,
+      "lastWatched": 1794381282377,
+      "completed": true
+    },
+    "Module 1/14. Lecture 8A - Deterministic Finite Automata DFA.mp4": {
+      "durationFileSize": 147612920,
+      "durationFileLastModified": 1706603850000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1587.92,
+      "currentTime": 5.39303,
+      "lastWatched": 1794395485813,
+      "completed": true
+    },
+    "Module 1/15. Lecture 8B - Designing DFA Part 1.mp4": {
+      "durationFileSize": 270623106,
+      "durationFileLastModified": 1706604042000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 2861.64,
+      "currentTime": 0.537452,
+      "lastWatched": 1794383422147,
+      "completed": true
+    },
+    "Module 1/16. Lecture 8C - Designing DFA Part 2.mp4": {
+      "durationFileSize": 169082618,
+      "durationFileLastModified": 1706604182000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1825.16,
+      "currentTime": 1825.16,
+      "lastWatched": 1794384651407,
+      "completed": true
+    },
+    "Module 1/17. Lecture 8D - Regular Language.mp4": {
+      "durationFileSize": 93997133,
+      "durationFileLastModified": 1706604252000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1030.84,
+      "currentTime": 1030.84,
+      "lastWatched": 1794385201780,
+      "completed": true
+    },
+    "Module 1/18. Lecture 8E - Designing DFA Part 3.mp4": {
+      "durationFileSize": 271700539,
+      "durationFileLastModified": 1706604412000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 2815.16,
+      "currentTime": 2652.12045,
+      "lastWatched": 1794396637093,
+      "completed": true
+    },
+    "Module 1/19. Lecture 8F - Designing DFA Part 4.mp4": {
+      "durationFileSize": 210941440,
+      "durationFileLastModified": 1706604534000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 2214.56,
+      "currentTime": 2214.56,
+      "lastWatched": 1794397811076,
+      "completed": true
+    },
+    "Module 1/20. Lecture 8G - Designing DFA Part 5.mp4": {
+      "durationFileSize": 82856494,
+      "durationFileLastModified": 1706604594000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 923,
+      "currentTime": 923,
+      "lastWatched": 1794398738291,
+      "completed": true
+    },
+    "Module 1/21. Lecture 8H - Designing DFA Part 6.mp4": {
+      "durationFileSize": 155443363,
+      "durationFileLastModified": 1706604660000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1679.92,
+      "currentTime": 1679.92,
+      "lastWatched": 1794405529503,
+      "completed": true
+    },
+    "Module 1/22. Lecture 9 - Extended Transition Function in DFA.mp4": {
+      "durationFileSize": 94640745,
+      "durationFileLastModified": 1706604802000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 999.84,
+      "currentTime": 999.84,
+      "lastWatched": 1794405976222,
+      "completed": true
+    },
+    "Module 1/24. Lecture 10B - Practice Questions.mp4": {
+      "durationFileSize": 55616577,
+      "durationFileLastModified": 1706604872000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 614.96,
+      "currentTime": 614.96,
+      "lastWatched": 1794408539334,
+      "completed": true
+    },
+    "Module 1/25. Lecture 10C - Recap - DFA for Complement of a Regular Language.mp4": {
+      "durationFileSize": 60834890,
+      "durationFileLastModified": 1706604914000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 628.88,
+      "currentTime": 604.871616,
+      "lastWatched": 1794408604172,
+      "completed": true
+    },
+    "Module 1/27. Lecture 12A - DFA Minimization - Part 1.mp4": {
+      "durationFileSize": 169696498,
+      "durationFileLastModified": 1706605050000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1614.6,
+      "currentTime": 1614.6,
+      "lastWatched": 1794577272638,
+      "completed": true
+    },
+    "Module 1/28. Lecture 12B - DFA Minimization Part 2 - State Equivalence.mp4": {
+      "durationFileSize": 268868076,
+      "durationFileLastModified": 1706605214000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 3009.96,
+      "currentTime": 3009.96,
+      "lastWatched": 1794578993326,
+      "completed": true
+    },
+    "Module 1/29. Lecture 12C - DFA Minimization Part 3 - Practice Questions.mp4": {
+      "durationFileSize": 116605645,
+      "durationFileLastModified": 1706605292000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1314.72,
+      "currentTime": 1314.72,
+      "lastWatched": 1794909088969,
+      "completed": true
+    },
+    "Module 1/30. Lecture 12D - DFA Minimization Part 4 - Practice Questions State Equivalence.mp4": {
+      "durationFileSize": 206289664,
+      "durationFileLastModified": 1706605450000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1782.033333,
+      "currentTime": 1782.033333,
+      "lastWatched": 1794909563195,
+      "completed": true
+    },
+    "Module 1/31. Lecture 12E - DFA Minimization Part 5 - Partition Algorithm for DFA Minimization.mp4": {
+      "durationFileSize": 324939652,
+      "durationFileLastModified": 1706605626000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 3295.933333,
+      "currentTime": 3295.933333,
+      "lastWatched": 1794995323215,
+      "completed": true
+    },
+    "Module 1/32. Lecture 12F - DFA Minimization Part 6 - Practice Partition Algorithm.mp4": {
+      "durationFileSize": 112317882,
+      "durationFileLastModified": 1706605694000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1138.6,
+      "currentTime": 1138.6,
+      "lastWatched": 1794995945217,
+      "completed": true
+    },
+    "Module 1/33. Lecture 13A - Configuration in DFA.mp4": {
+      "durationFileSize": 51571315,
+      "durationFileLastModified": 1706605734000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 530.88,
+      "currentTime": 530.88,
+      "lastWatched": 1794996104090,
+      "completed": true
+    },
+    "Module 1/35. Lecture 14A - NFA Introduction.mp4": {
+      "durationFileSize": 135741813,
+      "durationFileLastModified": 1706605874000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1275.1,
+      "currentTime": 1275.1,
+      "lastWatched": 1794998913579,
+      "completed": true
+    },
+    "Module 1/36. Lecture 14B - NFA Definition & Rules.mp4": {
+      "durationFileSize": 166003507,
+      "durationFileLastModified": 1706606010000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1610.3,
+      "currentTime": 1610.3,
+      "lastWatched": 1795000225113,
+      "completed": true
+    },
+    "Module 1/37. Lecture 14C - Understanding Non-Determinism.mp4": {
+      "durationFileSize": 262927136,
+      "durationFileLastModified": 1706606196000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 2501.4,
+      "currentTime": 2501.4,
+      "lastWatched": 1795002300733,
+      "completed": true
+    },
+    "Module 1/39. Lecture 14E - Practice Questions.mp4": {
+      "durationFileSize": 133280935,
+      "durationFileLastModified": 1706606314000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1320.666667,
+      "currentTime": 1320.666667,
+      "lastWatched": 1795003029324,
+      "completed": true
+    },
+    "Module 1/40. Lecture 14F - Null Moves in NFAs.mp4": {
+      "durationFileSize": 265049946,
+      "durationFileLastModified": 1706606452000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 2565.266667,
+      "currentTime": 2565.266667,
+      "lastWatched": 1795003965395,
+      "completed": true
+    },
+    "Module 1/41. Lecture 14G - Peter Linz Question on NFA.mp4": {
+      "durationFileSize": 62932128,
+      "durationFileLastModified": 1706606498000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 605.3,
+      "currentTime": 605.3,
+      "lastWatched": 1795004388079,
+      "completed": true
+    },
+    "Module 1/42. Lecture 14H - NFA Practice & NFA Extended Transition Function.mp4": {
+      "durationFileSize": 140341273,
+      "durationFileLastModified": 1706606580000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1566.56,
+      "currentTime": 1566.56,
+      "lastWatched": 1795005253552,
+      "completed": true
+    },
+    "Module 1/43. Lecture 14i - NFA Formal Definition & Rules.mp4": {
+      "durationFileSize": 98319769,
+      "durationFileLastModified": 1706606632000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 927.8,
+      "currentTime": 924.467124,
+      "lastWatched": 1795017769900,
+      "completed": true
+    },
+    "Module 1/44. Lecture 15A - Extended Transition Function.mp4": {
+      "durationFileSize": 639337874,
+      "durationFileLastModified": 1706606998000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 8282.76,
+      "currentTime": 8233.338676,
+      "lastWatched": 1795020929401,
+      "completed": true
+    },
+    "Module 1/45. Lecture 15B - Equivalence of DFA & NFA.mp4": {
+      "durationFileSize": 647771123,
+      "durationFileLastModified": 1706607374000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 8750.56,
+      "currentTime": 8739.425354,
+      "lastWatched": 1795076963163,
+      "completed": true
+    },
+    "Module 1/46. Lecture 16A - Regular Expression Part 1.mp4": {
+      "durationFileSize": 379168149,
+      "durationFileLastModified": 1706607576000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 3728.1,
+      "currentTime": 3728.1,
+      "lastWatched": 1795079556859,
+      "completed": true
+    },
+    "Module 1/47. Lecture 16B - Example Regular Expression.mp4": {
+      "durationFileSize": 51805572,
+      "durationFileLastModified": 1706607616000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 476.333333,
+      "currentTime": 476.333333,
+      "lastWatched": 1795080259218,
+      "completed": true
+    },
+    "Module 1/48. Lecture 16C - A Lot of Practice - Regular Expression.mp4": {
+      "durationFileSize": 388981502,
+      "durationFileLastModified": 1706607806000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 3639.9,
+      "currentTime": 3639.9,
+      "lastWatched": 1795497532585,
+      "completed": true
+    },
+    "Module 1/49. Lecture 16D - Regular Expression Analysis.mp4": {
+      "durationFileSize": 132714899,
+      "durationFileLastModified": 1706608004000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1202.866667,
+      "currentTime": 1202.866667,
+      "lastWatched": 1795498067987,
+      "completed": true
+    },
+    "Module 1/50. Lecture 16E - Practice Questions - Regular Expression.mp4": {
+      "durationFileSize": 148982426,
+      "durationFileLastModified": 1706608090000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1458.333333,
+      "currentTime": 1458.333333,
+      "lastWatched": 1795499152867,
+      "completed": true
+    },
+    "Module 1/51. Lecture 16F - Regular Expression - Analysis.mp4": {
+      "durationFileSize": 169962598,
+      "durationFileLastModified": 1706608226000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1655.4,
+      "currentTime": 1655.4,
+      "lastWatched": 1795512599024,
+      "completed": true
+    },
+    "Module 1/52. Lecture 16G - Important Properties of Regular Expressions.mp4": {
+      "durationFileSize": 447351728,
+      "durationFileLastModified": 1706608446000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 4209.633333,
+      "currentTime": 4209.633333,
+      "lastWatched": 1795514483517,
+      "completed": true
+    },
+    "Module 1/53. Lecture 16H - Some Basic Properties of Regular Expressions.mp4": {
+      "durationFileSize": 65807860,
+      "durationFileLastModified": 1706608520000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 689.7,
+      "currentTime": 689.7,
+      "lastWatched": 1795514835640,
+      "completed": true
+    },
+    "Module 1/54. Lecture 17A - Equivalence of RE and FA - Part 1 - Somethings About NFAs.mp4": {
+      "durationFileSize": 144307702,
+      "durationFileLastModified": 1706608598000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1325.666667,
+      "currentTime": 1325.666667,
+      "lastWatched": 1795516693119,
+      "completed": true
+    },
+    "Module 1/55. Lecture 17B - Equivalence of RE and FA - Part 2 - Converting RE to FA.mp4": {
+      "durationFileSize": 183566420,
+      "durationFileLastModified": 1706608702000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1724.1,
+      "currentTime": 1724.1,
+      "lastWatched": 1795532820038,
+      "completed": true
+    },
+    "Module 1/56. Lecture 17C - Equivalence of RE and FA - Part 3 - FA to RE.mp4": {
+      "durationFileSize": 48285789,
+      "durationFileLastModified": 1706608736000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 451.466667,
+      "currentTime": 451.466667,
+      "lastWatched": 1795533516828,
+      "completed": true
+    },
+    "Module 1/57. Lecture 17D - Equivalence of RE and FA - Part 4 - FA to RE.mp4": {
+      "durationFileSize": 130751995,
+      "durationFileLastModified": 1706608838000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1200.2,
+      "currentTime": 1200.2,
+      "lastWatched": 1795535561942,
+      "completed": true
+    },
+    "Module 1/58. Lecture 17E - Equivalence of RE and FA - Part 5 - Unary Alphabet DFA Analysis.mp4": {
+      "durationFileSize": 199829677,
+      "durationFileLastModified": 1706608940000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1951.7,
+      "currentTime": 1951.7,
+      "lastWatched": 1795612385644,
+      "completed": true
+    },
+    "Module 1/60. Lecture 18A - Pumping Lemma for Regular Languages - Part 1.mp4": {
+      "durationFileSize": 811110062,
+      "durationFileLastModified": 1706609400000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 10181.04,
+      "currentTime": 5822.437313,
+      "lastWatched": 1795612411845
+    },
+    "Module 1/61. Lecture 18B - Pumping Lemma for Regular Languages - Part 2.mp4": {
+      "durationFileSize": 618134846,
+      "durationFileLastModified": 1706609774000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 8256.768
+    },
+    "Module 1/62. Lecture 18C - Pumping Lemma for Regular Languages - Part 3.mp4": {
+      "durationFileSize": 462501298,
+      "durationFileLastModified": 1706610038000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 5793.68
+    },
+    "Module 1/63. Lecture 18D - Pumping Lemma for Regular Languages - Part 4 - Proof.mp4": {
+      "durationFileSize": 632282174,
+      "durationFileLastModified": 1706610494000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 8348.128
+    },
+    "Module 1/64. Lecture 18E - Pumping Lemma for Regular Languages - Part 5 - Practice.mp4": {
+      "durationFileSize": 612117027,
+      "durationFileLastModified": 1706610740000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 8206.2
+    },
+    "Module 1/66. Lecture 19B - Myhill Nerode Theorem Part 2 - Distinguishable Strings.mp4": {
+      "durationFileSize": 381607503,
+      "durationFileLastModified": 1706610870000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 3446.3
+    },
+    "Module 1/67. Lecture 19C - Myhill Nerode Theorem Part 3 - Practice.mp4": {
+      "durationFileSize": 248371331,
+      "durationFileLastModified": 1706610960000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 2347.833333
+    },
+    "Module 1/68. Lecture 19D - Myhill Nerode Theorem Part 4 - The Theorem.mp4": {
+      "durationFileSize": 274245731,
+      "durationFileLastModified": 1706611046000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 2605.233333
+    },
+    "Module 1/69. Lecture 19E - Revision & Practice - Myhill Nerode Theorem.mp4": {
+      "durationFileSize": 584644827,
+      "durationFileLastModified": 1706611254000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 7804.64
+    },
+    "Module 1/70. Lecture 19F - Finding Number of States in Minimal DFA - Myhill Nerode Theorem.mp4": {
+      "durationFileSize": 654568570,
+      "durationFileLastModified": 1706611526000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 8716.72
+    },
+    "Module 1/71. Lecture 19G - GATE PYQs on Minimal DFA - Myhill Nerode Theorem.mp4": {
+      "durationFileSize": 537071752,
+      "durationFileLastModified": 1706611998000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 7228
+    },
+    "Module 2/01. Lecture 1A - Context Free Grammars.mp4": {
+      "durationFileSize": 632049037,
+      "durationFileLastModified": 1706612384000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 8235.008
+    },
+    "Module 2/02. Lecture 1B - Practice & Standard Examples of CFGs.mp4": {
+      "durationFileSize": 497436341,
+      "durationFileLastModified": 1706612676000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 6838.272
+    },
+    "Module 2/03. Lecture 1C - Regular Grammars.mp4": {
+      "durationFileSize": 559360200,
+      "durationFileLastModified": 1706612874000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 8102.68
+    },
+    "Module 2/04. Lecture 1D - Every Regular Language is CFL - Proof.mp4": {
+      "durationFileSize": 116505267,
+      "durationFileLastModified": 1706612924000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1034.2
+    },
+    "Module 2/05. Lecture 1E - Regular Grammar to NFA & Vice Versa.mp4": {
+      "durationFileSize": 410806085,
+      "durationFileLastModified": 1706613070000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 5951.008
+    },
+    "Module 2/07. Lecture 1G - Practice Questions - Parse Tree & Derivations.mp4": {
+      "durationFileSize": 360027534,
+      "durationFileLastModified": 1706613196000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 4874
+    },
+    "Module 2/08. Lecture 1H - Ambiguity of CFGs & CFLs.mp4": {
+      "durationFileSize": 614753295,
+      "durationFileLastModified": 1706613392000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 8212.12
+    },
+    "Module 2/10. Lecture 2B - PDA Practice Questions.mp4": {
+      "durationFileSize": 299165178,
+      "durationFileLastModified": 1706613468000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 2329
+    },
+    "Module 2/20. Lecture 2E - PDA Analysis, Empty Stack Acceptance.mp4": {
+      "durationFileSize": 718291386,
+      "durationFileLastModified": 1706614194000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 8528.512
+    },
+    "Module 2/21. Lecture 2F - Correction in a Question.mp4": {
+      "durationFileSize": 94294309,
+      "durationFileLastModified": 1706614540000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 800.633333
+    },
+    "Module 2/22. Lecture 2G - Practice - PDA with Empty Stack Acceptance.mp4": {
+      "durationFileSize": 200136654,
+      "durationFileLastModified": 1706614642000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1672.233333
+    },
+    "Module 2/23. Lecture 3A - DPDA Part 1 - What is Nondeterminism.mp4": {
+      "durationFileSize": 116175439,
+      "durationFileLastModified": 1706614708000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1159.4
+    },
+    "Module 2/24. Lecture 3B - DPDA and DCFL.mp4": {
+      "durationFileSize": 733025632,
+      "durationFileLastModified": 1706615000000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 8852.544
+    },
+    "Module 3/02. Lecture 1B - Practice - Identification of Regular Languages.mp4": {
+      "durationFileSize": 197436652,
+      "durationFileLastModified": 1706615158000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1683.8
+    },
+    "Module 3/05. Lecture 2B - Identification of CFL, DCFL Languages.mp4": {
+      "durationFileSize": 525094860,
+      "durationFileLastModified": 1706615482000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 6555.136
+    },
+    "Module 4/01. Lecture 1A - Closure Properties of Regular Languages.mp4": {
+      "durationFileSize": 525038722,
+      "durationFileLastModified": 1706615846000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 7017.44
+    },
+    "Module 4/02. Lecture 1B - Closure Properties of Regular Languages - Part 2.mp4": {
+      "durationFileSize": 481021924,
+      "durationFileLastModified": 1706616102000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 6417.44
+    },
+    "Module 4/03. Lecture 2A - Closure Properties of CFLs.mp4": {
+      "durationFileSize": 728326753,
+      "durationFileLastModified": 1706616586000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 9860.64
+    },
+    "Module 4/04. Lecture 2B - Closure Properties of DCFLs.mp4": {
+      "durationFileSize": 317260797,
+      "durationFileLastModified": 1706616714000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 4142.8
+    },
+    "Module 4/05. Lecture 3 - Closure Properties of Nonregular Languages.mp4": {
+      "durationFileSize": 354869707,
+      "durationFileLastModified": 1706616860000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 5016.448
+    },
+    "Module 4/06. Lecture 4 - Chomsky Hierarchy & Types of Grammars.mp4": {
+      "durationFileSize": 390763445,
+      "durationFileLastModified": 1706617012000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 3731.1
+    },
+    "Module 4/07. Lecture 5 - Non-Closure of Regular Languages.mp4": {
+      "durationFileSize": 156625162,
+      "durationFileLastModified": 1706617096000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1486
+    },
+    "Module 4/08. Lecture 6 - Closure Properties of Finite Languages.mp4": {
+      "durationFileSize": 71333970,
+      "durationFileLastModified": 1706617150000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1013.666667
+    },
+    "Module 5/01. Lecture 1 - Introduction of Turing Machines.mp4": {
+      "durationFileSize": 587243699,
+      "durationFileLastModified": 1706617408000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 7360.064
+    },
+    "Module 5/03. Lecture 3 - Turing Machine - Formal Definition.mp4": {
+      "durationFileSize": 152724348,
+      "durationFileLastModified": 1706617472000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1244.5
+    },
+    "Module 5/05. Lecture 5 - Practice & Revision - Turing Machines.mp4": {
+      "durationFileSize": 756498926,
+      "durationFileLastModified": 1706617862000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 9817.08
+    },
+    "Module 5/06. Lecture 6 - Understanding Infinite Looping.mp4": {
+      "durationFileSize": 477057091,
+      "durationFileLastModified": 1706618116000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 6423.52
+    },
+    "Module 5/07. Lecture 7 - Decider, Decidable.mp4": {
+      "durationFileSize": 125059533,
+      "durationFileLastModified": 1706618184000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 1184.066667
+    },
+    "Module 5/09. Lecture 9 - Dovetailing, Variants of TM.mp4": {
+      "durationFileSize": 537200581,
+      "durationFileLastModified": 1706618358000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 6639.04
+    },
+    "Module 5/10. Lecture 10 - Encoding and Decidability.mp4": {
+      "durationFileSize": 520368847,
+      "durationFileLastModified": 1706618542000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 4820.666667
+    },
+    "Module 5/11. Lecture 11 - Language Vs Decision Problem.mp4": {
+      "durationFileSize": 230725296,
+      "durationFileLastModified": 1706618614000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 2014.933333
+    },
+    "Module 5/15. Lecture 13 - Logically Solving Decision Problems related to Language of TMs.mp4": {
+      "durationFileSize": 497467530,
+      "durationFileLastModified": 1706618804000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 6269.12
+    },
+    "Module 5/16. Lecture 14A - Decision Problems of Regular Languages.mp4": {
+      "durationFileSize": 495550754,
+      "durationFileLastModified": 1706618914000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 6089.92
+    },
+    "Module 5/20. Lecture 15C - Normal Forms of CFGs - CNF, GNF.mp4": {
+      "durationFileSize": 791352981,
+      "durationFileLastModified": 1706619230000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 9445.6
+    },
+    "Module 5/21. Lecture 15D - Decision Problems of Context Free Languages.mp4": {
+      "durationFileSize": 448704069,
+      "durationFileLastModified": 1706619408000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 6173.728
+    },
+    "Module 5/22. Lecture 16A - Universal TM, Membership Problem of TM.mp4": {
+      "durationFileSize": 458358541,
+      "durationFileLastModified": 1706619584000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 6104.736
+    },
+    "Module 5/23. Lecture 16B - Halting Problem of TM, Existence of Non-RE Language.mp4": {
+      "durationFileSize": 549189377,
+      "durationFileLastModified": 1706619788000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 6839.648
+    },
+    "Module 5/25. Lecture 16D - Practice and Revision - Rice Theorem.mp4": {
+      "durationFileSize": 396212051,
+      "durationFileLastModified": 1706619896000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 3288.933333
+    },
+    "Module 5/26. Lecture 16E - Rice Theorem Part 3 - Machine Property Vs Language Property.mp4": {
+      "durationFileSize": 278363887,
+      "durationFileLastModified": 1706619994000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 2219.733333
+    },
+    "Module 6/01. Lecture 1 - Functions Revision, Cardinality & Understanding Infinity.mp4": {
+      "durationFileSize": 685730631,
+      "durationFileLastModified": 1706620464000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 9583.72
+    },
+    "Module 6/02. Lecture 2 - Countable Sets.mp4": {
+      "durationFileSize": 387346245,
+      "durationFileLastModified": 1706620632000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 5665.32
+    },
+    "Module 6/03. Lecture 3 - Uncountable Sets & Cantor's Diagonalization Proof.mp4": {
+      "durationFileSize": 501801677,
+      "durationFileLastModified": 1706620802000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 6864.56
+    },
+    "Module 6/04. Lecture 4 - Three Definitions of Countable Sets.mp4": {
+      "durationFileSize": 642025228,
+      "durationFileLastModified": 1706621184000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 8805.92
+    },
+    "Module 6/05. Lecture 5 - Theorems for Countable Sets.mp4": {
+      "durationFileSize": 507495928,
+      "durationFileLastModified": 1706621566000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 7327.808
+    },
+    "Module 6/06. Lecture 6 - Cantor's Theorem & Consequences.mp4": {
+      "durationFileSize": 462028031,
+      "durationFileLastModified": 1706621746000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 6563.24
+    },
+    "Module 6/07. Lecture 7 - Countability Results in Theory of Computation.mp4": {
+      "durationFileSize": 676456935,
+      "durationFileLastModified": 1706622028000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 9308.88
+    },
+    "Module 6/08. Lecture 8 - Previous Exams Questions Discussion - GATE, TIFR, NET.mp4": {
+      "durationFileSize": 715234427,
+      "durationFileLastModified": 1706622314000,
+      "durationFileType": "video/mp4",
+      "durationStatus": "available",
+      "duration": 9273.68
+    }
+  }
+}
